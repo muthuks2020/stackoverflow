@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Stack Overflow</title>
+
+  <meta name="keywords" content="d3js,graph,tags,stackexchange">
+
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="tflow.css">
+  <meta property='og:title' content="Stack Overflow">
+</head>
+
+<body>
+
+  <div id="loading_status">Starting...</div>
+
+  <div id="footnote">
+
+  </div>
+
+  <div id="left_bar">
+
+    <div id="options">
+
+      <div id="hide_options">(hide)</div>
+
+      <div id="hideable">
+
+        Site:<br>
+        <select id="site_selector">
+        </select><br><br>
+
+        Number of tags:<br>
+        <select id="pageSize">
+          <option value="8">8</option>
+          <option value="16" selected="selected">16</option>
+          <option value="32">32</option>
+          <option value="64">64 (warning: SE may block you)</option>
+          <option value="100">100 (at your own wish...)</option>
+        </select><br><br>
+
+        Only questions with a tag:<br>
+        <input id="central_tag"></input><button id="go">Go!</button><br><br>
+
+        Tag coloring:<br>
+        <select id="colorParameter">
+          <option value="community">community detection</option>
+          <option value="answered">% answered</option>
+          <option value="answersMd">median number of answers</option>
+          <option value="answersAv">average number of answers</option>
+          <option value="scoreMd">median score</option>
+          <option value="scoreAv">average score</option>
+          <option value="viewMd">median view count</option>
+          <option value="viewAv">average view count</option>
+          <option value="reputationMd">median owner reputation</option>
+          <option value="reputationAv">average owner reputation</option>
+        </select>
+
+      </div>
+
+    </div>
+
+    <div id="theBar"></div>
+
+  </div>
+
+  <div id="right_bar">
+    <div class="site_info">
+      <div class="subtitle">
+        <a id="site_name">(Select site!)</a>
+        <span id="count"></span>
+      </div>
+      <div id="dscr"></div>
+    </div>
+
+    <div class="tag_info">
+      <div id="hide_tag_info">(hide)</div>
+      <div class="subtitle">
+        <a id="tag_name">(Click on a tag!)</a>
+        <span id="tag_count"></span><br>
+      </div>
+      <div id="show_conditional_subgraph">(show the conditional subgraph)</div>
+      <!--  <div id="dscr">(And here: on the tag.)</div> -->
+      <div class="aa">
+        <div id="askers">
+          <div class="subsubtitle">top askers</div>
+          <div class="facelist"></div>
+        </div>
+        <div id="answerers">
+          <div class="subsubtitle">top answerers</div>
+          <div class="facelist"></div>
+        </div>
+      </div>
+      <div id="questions" class="questions">
+        <div class="subsubtitle">top questions</div>
+      </div>
+    </div>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="d3.v3.min.js"></script>
+  <script src="se_query.js"></script>
+  <script src="se_tags.js"></script>
+  <script src="se_stats.js"></script>
+  <script src="linLegend.js"></script>
+  <script src="asinhLegend.js"></script>
+  <script src="community_detection.js"></script>
+  <script src="main.js"></script>
+  <script type="text/javascript">
+
+
+
+  </script>
+
+</body>
