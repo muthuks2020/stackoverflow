@@ -27,13 +27,13 @@ function fetchTopAskers(siteName, tagName) {
 }
 
 function fetchTopAnswerers(siteName, tagName) {
-  var answerersSize = 5;
+  var answerersSize = 25;
   var tagNameFixed = tagName.replace("#", "%23");
   return seQuery("tags/" + tagNameFixed + "/top-answerers/all_time", { site: siteName }, answerersSize);
 }
 
 function fetchTopQuestions(siteName, tagName) {
-  var howMany = 5;
+  var howMany = 25;
   var tagNameFixed = tagName.replace("#", "%23");
   return seQuery("questions", { site: siteName, tagged: tagNameFixed, sort: "votes", order: "desc" }, howMany);
   // return seQuery("tags/" + tagNameFixed + "/faq", {site: siteName}, howMany);
